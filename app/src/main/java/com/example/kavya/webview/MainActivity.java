@@ -38,7 +38,7 @@ final Context context = this;
         dialogButtonEnable.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                WifiManager wifi = (WifiManager) getSystemService(Context.WIFI_SERVICE);
+                WifiManager wifi = (WifiManager) getApplicationContext().getSystemService(Context.WIFI_SERVICE);
                 wifi.setWifiEnabled(true);
                 dialog.dismiss();
                 WebView webView=(WebView)findViewById(R.id.webView);
